@@ -1,0 +1,27 @@
+refer the html part form perivious tutorials 
+change the file name accordingly.
+
+here the the some example of javascript code 
+const employee={ // We have used const to make employee constant 
+    calcTax(){
+        console.log("tax rate is 10%");
+    },
+};
+
+const Abhinav={
+    salary: 100000,
+
+};
+
+const Abhinav2={
+    salary:200000,
+};
+
+Abhinav.__proto__ = employee;
+
+!!!!!!!!!!!!!!!!!!!! NOTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+IF OBJECT & PROTOTYPE HAVE SAME METHOD,OBJECT METHOD WILL BE USED.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
