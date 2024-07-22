@@ -1,0 +1,71 @@
+My first javascript code 
+
+let gameNum = 20;//let means we are providing values 
+let userNum = prompt("Guess the number: "); //prompt  means we are telling the page to give a message
+
+while (userNum !=gameNum){
+userNum=prompt("try again");
+}
+console.log("congraluations you won");//console.log means we are printing the value in the console part of the browser.
+----------------------------------------------------------------------------------
+Now let us make a button (our first task to make and interactive button using javascript)
+
+First we have to write a html code to make an button (here i have linked all the css as well as javascript as you can see in my code )
+---------
+html part
+----------
+
+Now let us discuss what i have written in the code line by line 
+
+you can add boiler plate  by pressing 
+ shift + ! then enter 
+This type of code will come 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- This part is for the linking css part-->
+    <title>Document</title> <!-- We have add the title -->
+</head>
+<body>
+    <script src="second.js"></script> <!-- this part is is to linkjavaScript -->
+    <button type="button"> Player 1: Abhinav</button> <!-- this line we have created button -->
+
+</body>
+</html>
+
+
+
+
+-------
+CSS Part
+--------
+
+Now make a new file name it style.css 
+
+button {
+    font-family: "helvetica neue", helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid rgb(200 200 0 / 60%);
+    background-color: rgb(0 217 217 / 60%);
+    color: rgb(100 0 0 / 100%);
+    box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
+    border-radius: 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+  }
+----------------
+JavaScript Part
+----------------
+const button =document.querySelector("button");
+
+button.addEventListener("click",updateName);
+
+function updateName(){
+    const name =prompt("Enter a new name");
+    button.textContent='player 1: ${name}';
+}
+
+
