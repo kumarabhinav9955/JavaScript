@@ -1,0 +1,47 @@
+now lets us add a button on a page 
+so we have to write html then we have to connect html and js file and css file
+
+------so here is code of html ---------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="second.js"></script>
+    <button type="button"> Player 1: Abhinav</button> -->
+    <script src="second.js"></script>
+    
+    
+</body>
+</html>
+-------here is code of js file i have given file name as second.js -------
+const button =document.querySelector("button");
+
+button.addEventListener("click",updateName);
+
+function updateName(){
+    const name =prompt("Enter a new name");
+    button.textContent='player 1: ${name}';
+}
+---------here is css file-------
+button {
+    font-family: "helvetica neue", helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid rgb(200 200 0 / 60%);
+    background-color: rgb(0 217 217 / 60%);
+    color: rgb(100 0 0 / 100%);
+    box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
+    border-radius: 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+  }
+
+so you can run the code you will abe to get a button on a page.
+
+-------------------------------------------------------------------------
+
