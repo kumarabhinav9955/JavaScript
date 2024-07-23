@@ -24,4 +24,75 @@ Abhinav.__proto__ = employee;
 IF OBJECT & PROTOTYPE HAVE SAME METHOD,OBJECT METHOD WILL BE USED.
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+Classes in JS
+------------------
 
+class MyClass{
+constructor(){....}
+myMethods(){....}
+}
+let myObj=new MyClass();
+
+Now let us do a small example for better understanding.
+
+
+class ToyatoCar{ // Here i have created a class name to toyatocar 
+    start() {   // i  have done nothing it is basically a start stop command 
+        console.log("start"); // here i have given command to start the console to print start
+    }
+    stop() { // i have created stop command 
+        console.log("stop"); // here it is given command to print stop 
+    }
+    setBrand(brand) { // here i have set brand name 
+        this.brandName=brand; // brand name is brand 
+
+    }
+}
+let tata = new ToyatoCar(); // here i have define the term tata  here i have used let tata to connect it to class toyatocar
+tata.setBrand("Abhinav"); // i have set brand name abhinav you can see at console part of your browser
+
+let lexys = new ToyatoCar(); // same as above i have define the term lexys that i have connected to toyatocar class
+lexys.setBrand("TATA"); // same as above i have set brand name tata and bounded lexys to show  tata brand name .
+
+---------------------------------------------
+!!!!!!! Important !!!!!
+javascript can create their own constructor 
+---------------------------------------------
+now let us create constructor and write 
+class ToyatoCar{
+    constructor(brand) {
+        console.log("creating new object");
+    }
+    start() {
+        console.log("start");
+    }
+    stop() {
+        console.log("stop");
+    }
+    setBrand(brand) {
+        this.brandName=brand;
+
+    }
+}
+let t = new ToyatoCar();
+t.setBrand("Abhinav");
+
+let lexys = new ToyatoCar();
+lexys.setBrand("TATA");
+
+code can be written in this format also 
+class ToyatoCar{
+    constructor(brand) {
+        console.log("creating new object");
+        this.brand=brand;
+    }
+    start() {
+        console.log("start");
+    }
+    stop() {
+        console.log("stop");
+    }
+    
+}
+let t = new ToyatoCar();
+let lexys = new ToyatoCar();
