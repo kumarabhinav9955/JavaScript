@@ -1,0 +1,21 @@
+Inheritance in JS
+
+Class Parent {
+}
+
+class Child extends Parent {
+}
+
+if child & parent have same method,child method will be used[Method Overriding]
+
+let us see an example now on inheritance 
+
+class Parent { // we have created a parent class
+    hello() { 
+        console.log("hello");
+    }
+}
+class Child extends Parent {
+
+}
+let obj = new Child();
