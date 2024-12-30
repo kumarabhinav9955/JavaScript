@@ -40,4 +40,31 @@ console.log(`${fahrenheitTemp}°F is equal to ${fahrenheitToCelsius(fahrenheitTe
 
 
 4.Write a factorial function that returns the factorial of a given number, n. Make sure you return the calculated value and not just print it. [function factorial(n){...}]
-5.Write a javascript function that converts a given amount of money into coins of denominations (1, 2, 5, 10 and 25). [function convert_to_coins(amount) {...}]. You may choose to print the coin denominations used on the console. E.g. convert_to_coins(87) should print 25 25 25 10 2 -->
+function fact(n){
+
+    if (n < 0){
+        return "factorial is not defined";
+    }
+
+    if (n === 0 || n ===1){
+        return 1;
+
+    }
+    return n * fact(n-1);
+
+   
+   
+}
+5.Write a javascript function that converts a given amount of money into coins of denominations (1, 2, 5, 10 and 25). [function convert_to_coins(amount) {...}]. You may choose to print the coin denominations used on the console. E.g. convert_to_coins(87) should print 25 25 25 10 2 
+
+function c_t_c(amount){
+    const denominations=[25,10,5,2,1];
+    let result =[];
+    for (let i=0; i < denominations.length;i++){
+        while (amount >= denominations[i]){
+            result.push(denominations[i]);
+            amount -=denominations[i];
+        }
+    }
+    console.log(result.join(' '))
+}
